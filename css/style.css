@@ -1,0 +1,50 @@
+
+.container {
+  width: 600px;
+  margin: auto;
+  background-color: yellow;
+  overflow: hidden;
+}
+.container p {
+  font-size: 3em;
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.images{
+  display: flex;
+  justify-content: center;
+}
+.images img {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.images img.kids{
+  position: absolute;
+  top:0px;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 100%;
+    width: 100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
